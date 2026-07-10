@@ -77,14 +77,14 @@
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="subtitle">MigraSense: Migraine Tracker &mdash; Last updated: March 20, 2026</p>
+        <p class="subtitle">MigraSense: Migraine Tracker &mdash; Last updated: July 11, 2026</p>
 
         <div class="highlight">
-            <p><strong>Our commitment:</strong> MigraSense is designed with your privacy as a priority. Your health data stays on your device or in your personal iCloud account. We do not collect, sell, share, or transmit your data to any third parties.</p>
+            <p><strong>Our commitment:</strong> MigraSense is designed with your privacy as a priority. Your health data stays on your device or in your personal iCloud account. We never sell your data or share it for advertising, and we do not use any third-party analytics or tracking. The only external services we use are Apple's own (such as iCloud, Apple Health, and Apple Weather).</p>
         </div>
 
         <h2>1. Data We Collect</h2>
-        <p>MigraSense collects only the data you provide directly within the app. We do not collect data automatically, nor do we use any third-party analytics, advertising, or tracking services.</p>
+        <p>MigraSense collects only the data you provide directly within the app, plus &mdash; if you turn on the optional weather feature &mdash; local weather conditions recorded when you log a migraine (see Section 1e). We do not use any third-party analytics, advertising, or tracking services.</p>
 
         <h3>a) Migraine &amp; Health Data</h3>
         <ul>
@@ -114,7 +114,13 @@
             <li>App lock and biometric authentication preferences</li>
         </ul>
 
-        <h2>2. How Your Data Is Stored</h2>
+        <h3>e) Weather Data (Optional)</h3>
+        <ul>
+            <li>Local weather conditions recorded at the time you log a migraine &mdash; temperature, humidity, barometric pressure, pressure trend, and general sky conditions</li>
+        </ul>
+        <p>Weather is stored alongside your migraine logs so you can review weather-related patterns over time. We do not store your GPS coordinates or location history (see Sections 2d and 3).</p>
+
+        <h2>2. How Your Data Is Stored &amp; Used</h2>
 
         <h3>a) On-Device Storage</h3>
         <p>All data is stored locally on your device using Apple's SwiftData framework. Your data benefits from iOS's built-in hardware encryption and device-level security protections.</p>
@@ -122,15 +128,23 @@
         <h3>b) iCloud Sync (Optional)</h3>
         <p>If you enable iCloud sync, your data is stored in your personal iCloud account via Apple's CloudKit. This data is encrypted in transit and at rest by Apple. Only you can access this data through devices signed into your Apple ID. You can disable iCloud sync at any time in the app's settings, and your data will remain on-device only.</p>
 
-        <h3>c) Apple HealthKit (Optional)</h3>
-        <p>If you enable HealthKit integration, MigraSense writes migraine headache records to the Apple Health app on your device. This data is governed by Apple's HealthKit privacy policies. MigraSense does not read data from HealthKit &mdash; it only writes migraine records with your explicit permission. You can revoke this access at any time in your device's Health settings.</p>
+        <h3>c) Apple Health (HealthKit) (Optional)</h3>
+        <p>With your explicit permission, MigraSense integrates with the Apple Health app on your device. This integration is optional and can be enabled, limited, or revoked at any time in the Apple Health app or iOS Settings.</p>
+        <ul>
+            <li><strong>Data we write:</strong> When you enable Apple Health sync, MigraSense records your logged migraine days to Apple Health as headache events.</li>
+            <li><strong>Data we read (read-only):</strong> If you separately turn on the optional &ldquo;Cycle &amp; Sleep Insights&rdquo; features, MigraSense reads your sleep and/or menstrual cycle data from Apple Health solely to calculate and display correlations with your migraines on your device. Each source is off by default and enabled individually.</li>
+        </ul>
+        <p>This read access is strictly <strong>read-only</strong> &mdash; MigraSense never writes, changes, or deletes your sleep or cycle data. Sleep and cycle data are used only to generate on-device insights; they are not added to your migraine logs, not synced to iCloud, not transmitted off your device, and never sold or shared. Because menstrual and sleep information is sensitive health data, it is processed only on your device and only while these features are enabled. You can revoke any of this access at any time in the Apple Health app or iOS Settings.</p>
+
+        <h3>d) Location &amp; Weather (Optional)</h3>
+        <p>If weather logging is enabled, MigraSense uses your device location <strong>only momentarily</strong> to look up local weather &mdash; when you log a migraine and, if enabled, once per day to record a baseline reading. Your approximate location is sent to Apple's WeatherKit service to return the current conditions, and Apple's handling of that request is governed by Apple's Privacy Policy. MigraSense does <strong>not</strong> store your GPS coordinates, does not track your location in the background, and does not use location for any purpose other than retrieving weather. Location access is optional and can be turned off at any time in iOS Settings, or by disabling weather logging within the app. Weather data is provided by Apple Weather.</p>
 
         <h2>3. Data We Do NOT Collect</h2>
         <div class="highlight">
             <p>MigraSense does <strong>not</strong> collect, access, or use:</p>
         </div>
         <ul>
-            <li>Location or GPS data</li>
+            <li>Continuous or background location tracking, or storage of your GPS coordinates or location history (your location is used only momentarily for weather &mdash; see Section 2d)</li>
             <li>Device identifiers or advertising IDs</li>
             <li>Browsing history or app usage analytics</li>
             <li>Contacts, photos, microphone, or camera data</li>
@@ -143,10 +157,12 @@
         <ul>
             <li><strong>Apple StoreKit</strong> &mdash; to process in-app subscriptions and purchases. Payment information is handled entirely by Apple and is never accessible to us.</li>
             <li><strong>Apple CloudKit</strong> &mdash; for optional iCloud data sync, encrypted and managed by Apple.</li>
-            <li><strong>Apple HealthKit</strong> &mdash; for optional health data integration, managed by Apple.</li>
+            <li><strong>Apple HealthKit</strong> &mdash; for optional health data integration (writing migraine events, and optional read-only access to sleep and cycle data), managed by Apple.</li>
+            <li><strong>Apple WeatherKit</strong> &mdash; to retrieve local weather conditions shown alongside your migraine logs. To return weather, your approximate location is sent to Apple. Weather data is provided by Apple Weather.</li>
+            <li><strong>Apple Core Location</strong> &mdash; to determine your location momentarily for the weather lookup above. Managed by Apple; not used for tracking.</li>
             <li><strong>Apple Sign-In</strong> &mdash; for optional account authentication, managed by Apple.</li>
         </ul>
-        <p>We do not integrate any third-party analytics, advertising, crash reporting, or tracking SDKs.</p>
+        <p>These are all first-party Apple services. We do not integrate any third-party analytics, advertising, crash reporting, or tracking SDKs.</p>
 
         <h2>5. Biometric Authentication</h2>
         <p>MigraSense offers an optional app lock feature using Face ID, Touch ID, or Optic ID. Biometric data is processed entirely on your device by Apple's Local Authentication framework. MigraSense never accesses, stores, or transmits your biometric data.</p>
