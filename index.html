@@ -77,14 +77,14 @@
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="subtitle">MigraSense: Migraine Tracker &mdash; Last updated: July 11, 2026</p>
+        <p class="subtitle">MigraSense: Migraine Tracker &mdash; Last updated: September 15, 2026</p>
 
         <div class="highlight">
-            <p><strong>Our commitment:</strong> MigraSense is designed with your privacy as a priority. Your health data stays on your device or in your personal iCloud account. We never sell your data or share it for advertising, and we do not use any third-party analytics or tracking. The only external services we use are Apple's own (such as iCloud, Apple Health, and Apple Weather).</p>
+            <p><strong>Our commitment:</strong> MigraSense is designed with your privacy as a priority. Your health data stays on your device or in your personal iCloud account. We never sell your data or share it for advertising. Aside from Apple's own services (such as iCloud, Apple Health, and Apple Weather), we use a single third-party service &mdash; RevenueCat &mdash; only to understand aggregate subscription activity. RevenueCat never receives your health, migraine, or other in-app data (see Section 4).</p>
         </div>
 
         <h2>1. Data We Collect</h2>
-        <p>MigraSense collects only the data you provide directly within the app, plus &mdash; if you turn on the optional weather feature &mdash; local weather conditions recorded when you log a migraine (see Section 1e). We do not use any third-party analytics, advertising, or tracking services.</p>
+        <p>MigraSense collects only the data you provide directly within the app, plus &mdash; if you turn on the optional weather feature &mdash; local weather conditions recorded when you log a migraine (see Section 1e). We do not use any third-party advertising or tracking services. The only third-party service we use is RevenueCat, which receives your App Store subscription events for subscription analytics only &mdash; never your health, migraine, or other in-app data (see Section 4).</p>
 
         <h3>a) Migraine &amp; Health Data</h3>
         <ul>
@@ -120,6 +120,12 @@
         </ul>
         <p>Weather is stored alongside your migraine logs so you can review weather-related patterns over time. We do not store your GPS coordinates or location history (see Sections 2d and 3).</p>
 
+        <h3>f) Subscription Data</h3>
+        <ul>
+            <li>Your App Store subscription status and transaction details (such as the product purchased, and purchase, renewal, and expiration dates) &mdash; observed to unlock premium features and to understand aggregate subscription activity via RevenueCat (see Sections 4 and 7)</li>
+        </ul>
+        <p>We never receive or store your payment card, bank, or billing information &mdash; all payments are handled entirely by Apple.</p>
+
         <h2>2. How Your Data Is Stored &amp; Used</h2>
 
         <h3>a) On-Device Storage</h3>
@@ -139,21 +145,25 @@
         <h3>d) Location &amp; Weather (Optional)</h3>
         <p>If weather logging is enabled, MigraSense uses your device location <strong>only momentarily</strong> to look up local weather &mdash; when you log a migraine and, if enabled, once per day to record a baseline reading. Your approximate location is sent to Apple's WeatherKit service to return the current conditions, and Apple's handling of that request is governed by Apple's Privacy Policy. MigraSense does <strong>not</strong> store your GPS coordinates, does not track your location in the background, and does not use location for any purpose other than retrieving weather. Location access is optional and can be turned off at any time in iOS Settings, or by disabling weather logging within the app. Weather data is provided by Apple Weather.</p>
 
+        <h3>e) Subscription Analytics (RevenueCat)</h3>
+        <p>To understand aggregate subscription activity &mdash; such as how many people subscribe, start trials, or renew &mdash; MigraSense uses RevenueCat in <strong>observer mode</strong>. RevenueCat does <strong>not</strong> process your payments (Apple does that) and does <strong>not</strong> control access to features; our own code, using Apple's server-verified entitlements, decides what you can access. RevenueCat simply observes your App Store subscription transactions for reporting. It receives a randomly generated anonymous identifier and subscription details (such as product ID; purchase, renewal, and expiration dates; price and currency; and subscription status), together with standard technical information (device type, operating system, country, and IP address). It never receives your name, email, health, migraine, location, or any other in-app data. See Section 4 for the link to RevenueCat's own privacy policy.</p>
+
         <h2>3. Data We Do NOT Collect</h2>
         <div class="highlight">
             <p>MigraSense does <strong>not</strong> collect, access, or use:</p>
         </div>
         <ul>
             <li>Continuous or background location tracking, or storage of your GPS coordinates or location history (your location is used only momentarily for weather &mdash; see Section 2d)</li>
-            <li>Device identifiers or advertising IDs</li>
-            <li>Browsing history or app usage analytics</li>
+            <li>Advertising identifiers (such as the IDFA) or any cross-app ad tracking</li>
+            <li>Browsing history or in-app behavioural/usage analytics (we do not track how you navigate or use the app)</li>
             <li>Contacts, photos, microphone, or camera data</li>
             <li>Crash reports or diagnostics sent to third parties</li>
             <li>Any data for advertising or marketing purposes</li>
         </ul>
+        <p>The only information shared with a non-Apple service is the anonymous subscription data described in Sections 2e and 4 &mdash; and even that never includes your health, migraine, or other in-app content.</p>
 
         <h2>4. Third-Party Services</h2>
-        <p>MigraSense uses only native Apple frameworks and services:</p>
+        <p>MigraSense uses the following Apple frameworks and services:</p>
         <ul>
             <li><strong>Apple StoreKit</strong> &mdash; to process in-app subscriptions and purchases. Payment information is handled entirely by Apple and is never accessible to us.</li>
             <li><strong>Apple CloudKit</strong> &mdash; for optional iCloud data sync, encrypted and managed by Apple.</li>
@@ -162,7 +172,11 @@
             <li><strong>Apple Core Location</strong> &mdash; to determine your location momentarily for the weather lookup above. Managed by Apple; not used for tracking.</li>
             <li><strong>Apple Sign-In</strong> &mdash; for optional account authentication, managed by Apple.</li>
         </ul>
-        <p>These are all first-party Apple services. We do not integrate any third-party analytics, advertising, crash reporting, or tracking SDKs.</p>
+        <p>In addition, MigraSense uses one non-Apple service:</p>
+        <ul>
+            <li><strong>RevenueCat</strong> &mdash; a subscription-analytics service used in <strong>observer mode</strong>. It does not process your payments (Apple does) and does not decide what features you can use; it only observes your App Store subscription transactions so we can understand aggregate subscription activity such as active subscribers, trials, and renewals. RevenueCat receives a randomly generated anonymous identifier and subscription/transaction details (such as product ID; purchase, renewal, and expiration dates; price and currency; and subscription status), along with standard technical information (device type, operating system, country, and IP address). It <strong>never</strong> receives your name, email, or any of your health, migraine, location, or other in-app data. RevenueCat's handling of this information is governed by its <a href="https://www.revenuecat.com/privacy/">Privacy Policy</a>.</li>
+        </ul>
+        <p>Apart from RevenueCat, used solely for subscription analytics as described above, every service we use is a first-party Apple service. We do not integrate any advertising, ad-tracking, crash-reporting, or behavioural-analytics SDKs, and no third party ever receives your health or migraine data.</p>
 
         <h2>5. Biometric Authentication</h2>
         <p>MigraSense offers an optional app lock feature using Face ID, Touch ID, or Optic ID. Biometric data is processed entirely on your device by Apple's Local Authentication framework. MigraSense never accesses, stores, or transmits your biometric data.</p>
@@ -172,6 +186,7 @@
 
         <h2>7. Subscriptions &amp; Payments</h2>
         <p>MigraSense offers optional subscription plans (monthly and yearly) for premium features. All payment processing is handled by Apple through the App Store. We do not collect, store, or have access to your credit card, bank account, or any payment information.</p>
+        <p>To understand aggregate subscription activity (such as active subscribers, trials, and renewals), we use RevenueCat in observer mode. RevenueCat observes your App Store subscription transactions but never processes your payments and never receives your health or migraine data &mdash; see Sections 2e and 4 for details.</p>
 
         <h2>8. Data Retention &amp; Deletion</h2>
         <p>Your data remains on your device (and optionally in your iCloud account) for as long as you use the app. To delete your data:</p>
@@ -180,7 +195,7 @@
             <li><strong>iCloud data</strong> &mdash; can be removed via Settings &gt; Apple ID &gt; iCloud &gt; Manage Storage on your device.</li>
             <li><strong>HealthKit data</strong> &mdash; can be deleted via the Apple Health app.</li>
         </ul>
-        <p>Since we do not store your data on any external servers, there is no server-side data to delete.</p>
+        <p>We do not store your health, migraine, or profile data on any external servers, so there is no server-side content of that kind to delete. The anonymous subscription records held by RevenueCat can be removed on request by contacting us at the email address below.</p>
 
         <h2>9. Children's Privacy</h2>
         <p>MigraSense is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided data through the app, please contact us so we can assist with its removal.</p>
